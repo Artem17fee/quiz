@@ -1,11 +1,69 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+
+@media screen and (max-device-width: 1024px) and (orientation:portrait){
+	body h1{
+		font-size: 2.5em;
+	}
+	body label{
+		font-size: 2em;
+		margin-left: 20px;
+	}
+	body .quizBox {
+		width: 100%;
+	}
+	body ul {
+		width: 800px;
+	}
+	body li {
+		margin-bottom: 13%;
+	}
+	body .multipleChoiceQues {
+		width: 100%;
+	}
+	body label:before {
+		width: 30px;
+		height: 30px;
+		top: 27px;
+		left: 10px;
+	}
+	body .bullet {
+		width: 35px;
+		height: 35px;
+		left: 3px;
+		top: 20px;
+	}
+	body .resultPage {
+		margin-top: 35%;
+	}
+	body .resultArea {
+		width: 100%;
+	}
+	body button {
+		height: 4em;
+		width: 260px;
+		font-size: 25px;
+	}
+	body .wallpaper, body #picture {
+		width: 800px;
+	}
+ }
+ @media screen and (max-device-width: 1024px) and (orientation:landscape){
+  	body .wallpaper {
+	  display: none;
+ 	 }
+}
 body {
 	background: #04040f;
 	font-family: 'Roboto Slab', serif;
 	font-size: 18px;
 	color: #f1f2ec;
 }
-
+body #next, body #submit {
+	bottom: 1vw;
+	right: 5vw;
+	position: fixed;
+	}
 .quizArea {
 	width: 95%;
 	margin: auto;
@@ -14,7 +72,9 @@ body {
 	text-align: center;
 	margin-top: 15px;
 }
-
+.wallpaper, #picture {
+	width: 500px;
+}
 .mc_quiz {
 	color: #67e52b;
 	margin-bottom: 0px;
@@ -49,7 +109,7 @@ button {
 	background-color: #f1f2ec;
 	border: none;
 	border-radius: 3px;
-	color: #7aa4a9;
+	color: #3c801e;
 	text-transform: uppercase;
 	letter-spacing: 0.5em;
 	transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
@@ -60,10 +120,6 @@ button {
 .backBtn:hover,
 .replay:hover {
 	letter-spacing: 0.8em;
-}
-
-.replay {
-	width: 30%;
 }
 
 .backBtn {
