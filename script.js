@@ -3,64 +3,52 @@ var $progressValue = 0;
 var resultList = [];
 
 const quizdata = [{
-		question: "Выберите логотип для фреймворка?",
-		options: ["Из 'Avengers'", "Из ситкома 'Теория большого взрыва'", "Лого из фильма 'V-значит Вендетта'", "Не знаю, например лого из 'Крутых бобров' было ничего такое"],
-		category: 1
+		question: "Выберите логотип для фреймворка из следующих кинолент",
+		options: ["Avengers", "Теория большого взрыва", "V-значит Вендетта", "Крутые бобры"],
 	},
 	{
-		question: "Выберите создателя лучшего фреймфорка?",
+		question: "Выберите создателя лучшего фреймворка",
 		options: ["Google", "Facebook", "Бывший работник Google", "Неравнодушное комьюнити"],
-		category: 2
 	},
 	{
 		question: "Какое имя вам больше нравится?",
 		options: ["Angie", "Amber", "Rihanna", "Evie"],
-		category: 3
 	},
 	{
 		question: "Какие инструменты тестирования вы предпочитаете?",
 		options: ["Jasmine & karma", "Karma & Mocha, jest", "Q-inite", "Jest & Enzyme"],
-		category: 1
 	},
 	{
 		question: "В каком году по вашему мнению вышел самый лучший фреймворк?",
 		options: ["2011", "2013", "2014", "2016"],
-		category: 2
 	},
 	{
 		question: "Выберите уровень сложности вашего фреймворка",
 		options: ["Hard", "Easy", "Normal", "Very Hard!"],
-		category: 3
 	},
 	{
-		question: "Какие параметр фреймоврка для вас более важен?",
-		options: ["TypeScript", "Модульность", "Легкий JS и HTML", "Зрелость фреймворка и сообщества"],
-		category: 2
+		question: "Какие параметр фреймворка для вас более важен?",
+		options: ["Модульность", "Легкий JS и HTML", "Зрелость фреймворка и сообщества", "TypeScript"],
 	},
 	{
 		question: "Какими сервисами вы пользуетесь чаще всего?",
 		options: ["Forbes, Wix, Weather.com, Google", "Uber, Twitter, Reddit, Paypal, Facebook", "Alibaba, Baidu, GitLab", "Netflix, Linkedln"],
-		category: 3
 	},
 	{
 		question: "Как вы думаете, cколько звёзд на GitHub у вашего фреймворка?",
 		options: ["21К+", "47К+", "128К+", "136К+"],
-		category: 1
 	},
 	{
 		question: "Что вы почувствовали, когда вы впервые увидели документацию вашего фреймворка?",
-		options: ["Восторг! Я читал и плакал от легкости изучения", "Пфф и всё? ..ааа тут есть ещё и подразделы LOL", "Слава богам - она русифицирована!", "Документация как документация"],
-		category: 2
+		options: ["Я читал и плакал от легкости изучения", "Пфф и всё? ..ааа тут есть ещё и подразделы LOL", "Слава богам - она русифицирована!", "Обычные доки"],
 	},
 	{
 		question: "Что вы предпочитаете разрабатывать?",
 		options: ["Modern web & native apps (iOS and Android)", "Large-scale and feature-rich apps", "Web apps", "SPAs and Web"],
-		category: 3
 	},
 	{
-		question: "Обычная ситуация: Ваш старый знакомый попросил сделать мобильное приложение. Какой инструмент вы выберите?",
+		question: "Ваш знакомый попросил сделать мобильное приложение. Какой инструмент вы выберите?",
 		options: ["Ionic", "React-Native", "Cordova", "Weex"],
-		category: 1
 	}
 ];
 /** Random shuffle questions **/
@@ -161,7 +149,6 @@ function addClickedAnswerToResult(questions, presentIndex, clicked) {
 		index: presentIndex,
 		question: questions[presentIndex].question,
 		clicked: clicked,
-		category: questions[presentIndex].category
 	}
 	resultList.push(result);
 }
@@ -212,7 +199,7 @@ $(document).ready(function () {
 			"Зрелость фреймворка и сообщества",
 			"Netflix, Linkedln",
 			"21К+",
-			"Документация как документация",
+			"Обычные доки",
 			"Web apps",
 			"Cordova"
 		];
@@ -256,7 +243,7 @@ $(document).ready(function () {
 			"Легкий JS и HTML",
 			"Alibaba, Baidu, GitLab",
 			"136К+",
-			"Восторг! Я читал и плакал от легкости изучения",
+			"Я читал и плакал от легкости изучения",
 			"SPAs and Web",
 			"Weex",
 		];
